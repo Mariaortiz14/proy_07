@@ -10,12 +10,12 @@
 <script>
 
 
-/*
+/*creamos una constante aprendiz 1
     const aprendiz1 ={
         nombre: 'Juan',
         documento: '1234567',
         edad: 12,
-
+definimos las funciones de las acciones que van a realizar mas adelante
         saludar : function () {
             console.log(`Hola, me llamo ${this.nombre}` +
             ` y tengo ${this.edad} años`);
@@ -25,7 +25,7 @@
             console.log(`Feliz aprendizaje! les desea ${this.nombre}`);
         }
     }
-
+exportamos para que se muestre en la consola
     console.log(`Tarea 1`);
     console.log({aprendiz1});
 
@@ -64,7 +64,7 @@
     
     aprendiz1.estudiar();
     */
-
+//determinamos una funcion aprendiz con los parametros heredados y agregamos unos nuevos
     function Aprendiz(documento,nombres,apellidos,edad, ficha, programa){
         this.documento = documento;
         this.nombres = nombres;
@@ -73,12 +73,12 @@
         this.ficha = ficha;
         this.programa = programa;
     }
-
+//utilizamos let para asignarle el valor a una variable
     let aprendiz1 = new Aprendiz('1234567', 'german antonio',
                                 'cordoba', 23, '2798618', 'ADSO');
     
     console.log({aprendiz1});
-
+//utilizamos prototype  para acceder a un objeto que será el prototipo de otro objeto.
     Aprendiz.prototype.saludar = function(){
         console.log(`Hola, me llamo ${this.nombres} ` +
                     `y tengo ${this,edad} años`);
@@ -94,7 +94,7 @@
                     `y estoy cursando el 1er trimestre del programa ${this.programa}!`);
     }
 
-    //herencia prototipica 
+    // determinamos una herencia prototipica 
     function AprendizEtapaPractica(documento, nombres, apellidos, edad, 
                                     ficha, programa, empresa, funcion){
 
